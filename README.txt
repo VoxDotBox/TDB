@@ -5,7 +5,7 @@ config.json excluded from commits
 STEPS
 + check node.js install 
 - open cmd in this folder, node -v 
-- https://nodejs.org/en/
+
 + discord.js will need to be installed 
 -  npm install discord.js 
 (optional) + write simple script to do steps for you
@@ -13,5 +13,5 @@ STEPS
 RESOURCES
 https://discordjs.guide/preparations/#installing-node-js
 https://discord.js.org/#/docs/main/stable/general/updating
-
+https://nodejs.org/en/
 
