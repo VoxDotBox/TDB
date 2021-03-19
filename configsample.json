@@ -1,0 +1,9 @@
+{
+	"_NOTE0": "github does not ignore this file, it should not be used for config.",
+	"_NOTE1": "copy paste from prefix below into new config.json, or rename and delete notes",
+	"prefix": "!",
+	"token": "your-token-goes-here",
+	"ph1": "1. CHANGE THIS",
+	"ph2": "2. CHANGE THIS",
+	"ph3": "3. CHANGE THIS"
+}
