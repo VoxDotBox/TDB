@@ -12,5 +12,6 @@ STEPS
 
 RESOURCES
 https://discordjs.guide/preparations/#installing-node-js
+https://discord.js.org/#/docs/main/stable/general/updating
 
 
