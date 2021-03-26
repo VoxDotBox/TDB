@@ -11,7 +11,7 @@ client.commands = new Discord.Collection();
 // TODO: check if config exists, create if false (with variables)
 
 
-const { bottoken, prefix, ph1, ph2, ph3 } = require('./config.json');
+const { bottoken, prefix} = require('./config.json');
 const fs = require('fs');
 // forcing only js files
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
@@ -39,11 +39,17 @@ client.on('message', message => {
     const args = message.content.slice(prefix.length).trim().split(/ +/);
     const command = args.shift().toLowerCase();
 
-    if (command === 'ping') {
-        client.commands.get('ping').execute(message, args); }
-        else if (command == 'backup'){
-            client.commands.get('backup').execute(message, args);
-        }
+//better way to handle commands, user enters command, bot checks if command is a module in folder
+    if (!client.commands.has(command)) {
+        message.channel.send(`Invalid command. Use ${prefix}help for a list of commands.`);
+    return;
+    }
+    try {
+        client.commands.get(command).execute(message, args);
+    } catch (error) {
+        console.error(error);
+        message.channel.send(`Something is wrong, try again.`);
+    }
 });
 // TODO: use modules for commands
     // other commands...
